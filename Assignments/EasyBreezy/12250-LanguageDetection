@@ -1,0 +1,33 @@
+#include <iostream> //12250
+#include <string>
+using namespace std;
+
+int main() {
+	int i=1;
+	string greeting;
+
+	while (greeting != "#"){
+		cin >> greeting;
+		if (greeting == "#"){
+			break;}
+		cout << "Case " << i << ": "; 
+
+		if (greeting == "HELLO")
+			cout << "ENGLISH\n";
+		else if (greeting == "HOLA")
+			cout << "SPANISH\n";
+		else if (greeting == "HALLO")
+			cout << "GERMAN\n";
+		else if (greeting == "BONJOUR")
+			cout << "FRENCH\n";
+		else if (greeting == "CIAO")
+			cout << "ITALIAN\n";
+		else if (greeting == "ZDRAVSTVUJTE")
+			cout << "RUSSIAN\n";
+		else
+			cout << "UNKNOWN\n";
+
+		i++;
+	}
+	
+}
