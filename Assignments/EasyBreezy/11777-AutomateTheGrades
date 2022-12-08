@@ -1,0 +1,44 @@
+#include <iostream> // 11777
+#include <algorithm>
+using namespace std;
+
+int main() {
+  int i, T, term1, term2, final, att, 
+	test1, test2, test3, avg, grade, minimum;
+
+	char letter;
+	
+	cin >> T;
+	
+  for (i = 1; i <= T; i++) {
+    cin >> term1 >> term2 >> final >> att >> test1 >> test2 >> test3;
+		
+		minimum = min(test1, test2);
+		minimum = min(minimum, test3);
+		
+		if (minimum == test1)
+			avg = test2 + test3;
+		if (minimum == test2)
+			avg = test1 + test3;
+		if (minimum == test3)
+			avg = test2 + test1;
+
+		avg /= 2;
+
+		grade =	(term1 + term2 + final + att + avg);
+
+		if (grade < 101)
+			letter = 'A';
+		if (grade < 90)
+			letter = 'B';
+		if (grade < 80)
+			letter = 'C';
+		if (grade < 70)
+			letter = 'D';
+		if (grade < 60)
+			letter = 'F';
+
+		cout << "Case " << i << ": " << letter << endl;
+	}
+
+}
