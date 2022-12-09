@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+	int i, j, T, x, y, num, ctr;
+	cin >> T;
+	
+	for (i = 1; i <= T; i++){
+		num = 0;
+		cin >> x >> y;
+		
+		if (x % 2 == 0)
+			x += 1;
+		if (y % 2 == 0)
+			y -= 1;
+
+		ctr = ((y - x) / 2)+ 1;
+		
+		for (j = 0; j < ctr; j++){
+			num = num + x;
+			x += 2; 
+		}
+
+		cout << "Case " << i << ": " << num << endl;
+	}
+}
