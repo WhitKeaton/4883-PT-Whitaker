@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+	double x;
+  int y, z, i;
+	z = 1;
+	x = 1;
+	cin >> x;
+	while (x > 0){
+		
+		y = 0;
+
+		while (x > 1){
+			x /= 2;
+			y++;
+		}
+		
+		cout << "Case " << z << ": " << y << endl;
+		z++;
+		cin >> x;
+	}
+}
